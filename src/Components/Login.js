@@ -1,4 +1,5 @@
 import React from "react";
+import "./style/login.css";
 
 function Login(props) {
   const {
@@ -15,45 +16,63 @@ function Login(props) {
   } = props;
   return (
     <>
-      <section className="login">
-        <div className="loginContainer">
-          <label>UserName</label>
-          <input
-            type="text"
-            autoFocus
-            required
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-          <p className="errorMsg">{emailError}</p>
-          <label>password</label>
-          <input
-            type="password"
-            required
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-          <p className="errorMsg">{passwordError}</p>
-        </div>
+      <section className="flex">
+        <div className="box">
+          <div className="innerBox">
+            <h1 className="headingo">LOGIN PAGE</h1>
+            <hr />
+            {/* <label>UserName</label> */}
+            <div className="back">
+              <input
+                type="text"
+                autoFocus
+                required
+                value={email}
+                className="marginTop"
+                placeholder="Abc@gmail.com"
+                onChange={(e) => setEmail(e.target.value)}
+              />
+              <p className="errorMsg">{emailError}</p>
+              {/* <label>password</label> */}
+              <input
+                type="password"
+                required
+                value={password}
+                className="copyWidth"
+                placeholder="Password..."
+                onChange={(e) => setPassword(e.target.value)}
+              />
+              <p className="errorMsg">{passwordError}</p>
+            </div>
 
-        <div className="btnContainer">
-          {hasAccount ? (
-            <>
-              <button onClick={handleLogin}>Sign in </button>
-              <p>
-                Don't have an account ?
-                <span onClick={() => setHasAccount(!hasAccount)}>Sign up</span>
-              </p>
-            </>
-          ) : (
-            <>
-              <button onClick={handleSignup}>Sign up </button>
-              <p>
-                have an account ?
-                <span onClick={() => setHasAccount(!hasAccount)}>Sign in</span>
-              </p>
-            </>
-          )}
+            <div>
+              {hasAccount ? (
+                <>
+                  <button className="button" onClick={handleLogin}>
+                    Sign in
+                  </button>
+                  <p>
+                    Don't have an account ?
+                    <span onClick={() => setHasAccount(!hasAccount)}>
+                      Sign up
+                    </span>
+                  </p>
+                </>
+              ) : (
+                <>
+                  <button className="button" onClick={handleSignup}>
+                    Sign up
+                  </button>
+                  <p>
+                    have an account ?
+                    <span onClick={() => setHasAccount(!hasAccount)}>
+                      Sign in
+                    </span>
+                  </p>
+                </>
+              )}
+            </div>
+          </div>
         </div>
       </section>
     </>

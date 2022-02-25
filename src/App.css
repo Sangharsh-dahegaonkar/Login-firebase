@@ -1,4 +1,4 @@
-* {
+/* * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -89,10 +89,10 @@ button {
 .login .loginContainer .errorMsg {
   color: red;
   font-size: 16px;
-}
+} */
 
-.hero {
-  width: 100%;
+/* .hero {
+  width: 100vw;
   min-height: 100vh;
   background: radial-gradient(
     ellipse at left bottom,
@@ -104,7 +104,7 @@ button {
 
 .hero nav {
   background: #603bbb;
-  width: 100%;
+  width: 100vw;
   padding: 20px 40px;
   display: flex;
   align-items: center;
@@ -119,4 +119,4 @@ button {
   width: 86px;
   padding: 8px 0;
   background: #3a2b58;
-}
+} */
