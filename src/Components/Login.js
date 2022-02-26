@@ -21,7 +21,7 @@ function Login(props) {
           <div className="innerBox">
             <h1 className="headingo">LOGIN PAGE</h1>
             <hr />
-            {/* <label>UserName</label> */}
+
             <div className="back">
               <input
                 type="text"
@@ -33,7 +33,7 @@ function Login(props) {
                 onChange={(e) => setEmail(e.target.value)}
               />
               <p className="errorMsg">{emailError}</p>
-              {/* <label>password</label> */}
+
               <input
                 type="password"
                 required
@@ -51,24 +51,24 @@ function Login(props) {
                   <button className="button" onClick={handleLogin}>
                     Sign in
                   </button>
-                  <p>
+                  {/* <p>
                     Don't have an account ?
                     <span onClick={() => setHasAccount(!hasAccount)}>
                       Sign up
                     </span>
-                  </p>
+                  </p> */}
                 </>
               ) : (
                 <>
                   <button className="button" onClick={handleSignup}>
                     Sign up
                   </button>
-                  <p>
+                  {/* <p>
                     have an account ?
                     <span onClick={() => setHasAccount(!hasAccount)}>
                       Sign in
                     </span>
-                  </p>
+                  </p> */}
                 </>
               )}
             </div>

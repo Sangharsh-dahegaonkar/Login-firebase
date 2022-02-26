@@ -12,7 +12,7 @@
 .box {
   margin-top: 15vh;
   text-align: center;
-  width: 400px;
+  width: 350px;
   height: 500px;
   background-color: whitesmoke;
   border-radius: 5px;
@@ -22,7 +22,7 @@
 }
 .innerBox {
   margin: 50px 0px;
-  width: 300px;
+  width: 250px;
   height: 400px;
   background-color: rgba(255, 255, 255, 0.788);
 }
@@ -32,7 +32,7 @@
 }
 .marginTop {
   margin-top: 10vh;
-  width: 250px;
+  width: 200px;
   height: 30px;
   color: rgb(1, 9, 15);
   text-align: center;
@@ -40,14 +40,14 @@
 .copyWidth {
   margin: 20px 0px;
   height: 30px;
-  width: 250px;
+  width: 200px;
   text-align: center;
 }
 .button {
   margin-top: 20px;
   background-color: rgb(42, 123, 189);
   color: whitesmoke;
-  width: 250px;
+  width: 200px;
   height: 30px;
   cursor: pointer;
   border-radius: 5px;
