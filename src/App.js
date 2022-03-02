@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import fire from "./Components/fire";
 import Login from "./Components/Login";
-import Hero from "./Components/Hero";
+import HomePage from "./Components/HomePage";
 import "./App.css";
 
 function App() {
@@ -83,7 +83,7 @@ function App() {
     <>
       <div className="App">
         {user ? (
-          <Hero handleLogout={handleLogout} />
+          <HomePage handleLogout={handleLogout} />
         ) : (
           <Login
             email={email}

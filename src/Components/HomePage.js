@@ -1,7 +1,9 @@
 import React from "react";
-import "./style/hero.css";
+import ListItem from "./ListPopulate/ListItem";
+import AddFile from "./AddFiles/AddFile";
+import "./style/homePage.css";
 
-function Hero({ handleLogout }) {
+function HomePage({ handleLogout }) {
   return (
     <>
       <header>
@@ -13,11 +15,16 @@ function Hero({ handleLogout }) {
           </div>
         </div>
       </header>
-      <div className="back1">
+      <br />
+      <div className="headingCenter">
         <h2>Welcome to the home page</h2>
       </div>
+      <AddFile />
+      <br />
+
+      <ListItem />
     </>
   );
 }
 
-export default Hero;
+export default HomePage;
