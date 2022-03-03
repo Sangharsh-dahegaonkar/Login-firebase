@@ -1,6 +1,8 @@
 import React from "react";
 import ListItem from "./ListPopulate/ListItem";
 import AddFile from "./AddFiles/AddFile";
+import MTable from "./MTable";
+import MuiTable from "./MuiTable";
 import "./style/homePage.css";
 
 function HomePage({ handleLogout }) {
@@ -19,10 +21,12 @@ function HomePage({ handleLogout }) {
       <div className="headingCenter">
         <h2>Welcome to the home page</h2>
       </div>
-      <AddFile />
-      <br />
+      {/* <AddFile />
+      <br /> */}
 
       <ListItem />
+      {/* <MTable /> */}
+      <MuiTable />
     </>
   );
 }

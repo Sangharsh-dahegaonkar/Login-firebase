@@ -1,8 +1,9 @@
 li {
   float: left;
-  margin: 0px 5px;
-  background-color: rgb(4, 4, 65);
-  color: whitesmoke;
+  margin: 0px 10px;
+  /* background-color: rgb(4, 4, 65);
+  color: whitesmoke; */
+  text-decoration: underline;
 }
 
 ul {
