@@ -16,61 +16,64 @@ function Login(props) {
   } = props;
   return (
     <>
-      <section className="flex">
-        <div className="box">
-          <div className="innerBox">
-            <h1 className="headingo">LOGIN PAGE</h1>
-            <hr />
+      <section>
+        <div className="backgroundContainer">
+          <div className="Loginbox">
+            <div className="innerLoginBox">
+              <h1 className="heading">LOGIN PAGE</h1>
 
-            <div className="back">
-              <input
-                type="text"
-                autoFocus
-                required
-                value={email}
-                className="marginTop"
-                placeholder="Abc@gmail.com"
-                onChange={(e) => setEmail(e.target.value)}
-              />
-              <p className="errorMsg">{emailError}</p>
+              <hr />
 
-              <input
-                type="password"
-                required
-                value={password}
-                className="copyWidth"
-                placeholder="Password..."
-                onChange={(e) => setPassword(e.target.value)}
-              />
-              <p className="errorMsg">{passwordError}</p>
-            </div>
+              <div className="back">
+                <input
+                  type="text"
+                  autoFocus
+                  required
+                  value={email}
+                  className="userNameStyle"
+                  placeholder="Abc@gmail.com"
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+                <p className="errorMsg">{emailError}</p>
 
-            <div>
-              {hasAccount ? (
-                <>
-                  <button className="button" onClick={handleLogin}>
-                    Sign in
-                  </button>
-                  {/* <p>
+                <input
+                  type="password"
+                  required
+                  value={password}
+                  className="passwordStyle"
+                  placeholder="Password..."
+                  onChange={(e) => setPassword(e.target.value)}
+                />
+                <p className="errorMsg">{passwordError}</p>
+              </div>
+
+              <div>
+                {hasAccount ? (
+                  <>
+                    <button className="button" onClick={handleLogin}>
+                      Sign in
+                    </button>
+                    {/* <p>
                     Don't have an account ?
                     <span onClick={() => setHasAccount(!hasAccount)}>
                       Sign up
                     </span>
                   </p> */}
-                </>
-              ) : (
-                <>
-                  <button className="button" onClick={handleSignup}>
-                    Sign up
-                  </button>
-                  {/* <p>
+                  </>
+                ) : (
+                  <>
+                    <button className="button" onClick={handleSignup}>
+                      Sign up
+                    </button>
+                    {/* <p>
                     have an account ?
                     <span onClick={() => setHasAccount(!hasAccount)}>
                       Sign in
                     </span>
                   </p> */}
-                </>
-              )}
+                  </>
+                )}
+              </div>
             </div>
           </div>
         </div>

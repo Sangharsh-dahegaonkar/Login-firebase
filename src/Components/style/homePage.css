@@ -6,12 +6,12 @@ header {
   height: 10vh;
 }
 
-.tryPos {
+.headerContainer {
   width: 100vw;
   height: 80px;
   background-color: aqua;
 }
-.posRelative {
+.logoutButtonPosition {
   position: relative;
   display: flex;
   justify-content: center;
@@ -23,7 +23,7 @@ header {
   border-radius: 2px;
   background-color: rgb(219, 239, 240);
 }
-.buttonPos {
+.logoutButton {
   background-color: rgb(0, 153, 255);
   color: whitesmoke;
   cursor: pointer;
@@ -36,8 +36,44 @@ header {
   font-size: 20px;
 }
 
-@media only screen and (max-width: 500px) {
-  .posRelative {
+@media only screen and (max-width: 280px) {
+  .logoutButtonPosition {
+    left: 60vw;
+  }
+}
+@media only screen and (min-width: 281px) {
+  .logoutButtonPosition {
+    left: 65vw;
+  }
+}
+
+@media only screen and (min-width: 350px) {
+  .logoutButtonPosition {
+    left: 70vw;
+  }
+}
+@media only screen and (min-width: 450px) {
+  .logoutButtonPosition {
     left: 75vw;
+  }
+}
+@media only screen and (min-width: 650px) {
+  .logoutButtonPosition {
+    left: 80vw;
+  }
+}
+@media only screen and (min-width: 850px) {
+  .logoutButtonPosition {
+    left: 85vw;
+  }
+}
+@media only screen and (min-width: 950px) {
+  .logoutButtonPosition {
+    left: 88vw;
+  }
+}
+@media only screen and (min-width: 1180px) {
+  .logoutButtonPosition {
+    left: 90vw;
   }
 }

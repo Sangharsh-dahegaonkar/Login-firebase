@@ -1,37 +1,37 @@
-.flex {
+.backgroundContainer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  /* flex-direction: column;
-  align-items: center; */
+  align-items: center;
+  /* flex-direction: column; */
   width: 100vw;
   height: 100vh;
   background-image: url(http://chitrahandicraft.com/wp-content/uploads/2019/02/login-page-background-images-hd-10.jpg);
 }
 
-.box {
-  margin-top: 15vh;
+.Loginbox {
   text-align: center;
   width: 350px;
   height: 500px;
   background-color: whitesmoke;
+  /* background-color: rgb(203, 221, 221); */
   border-radius: 5px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
-.innerBox {
+.innerLoginBox {
   margin: 50px 0px;
   width: 250px;
   height: 400px;
   background-color: rgba(255, 255, 255, 0.788);
 }
-.headingo {
-  margin: 15px 0px;
+.heading {
+  margin: 20px 0px;
   font-size: 35px;
 }
-.marginTop {
-  margin-top: 10vh;
+.userNameStyle {
+  margin-top: 8vh;
   width: 200px;
   height: 35px;
   color: rgb(1, 9, 15);
@@ -42,7 +42,7 @@
   border-right: 0px;
   border-bottom: 1px solid #ccc;
 }
-.copyWidth {
+.passwordStyle {
   margin: 20px 0px;
   height: 35px;
   width: 200px;
@@ -71,8 +71,8 @@ button:hover {
   color: rgb(19, 121, 121);
 }
 
-@media screen and (max-width: 1000px) {
+/* @media screen and (max-width: 1000px) {
   .textCenter {
     height: 50vh;
   }
-}
+} */

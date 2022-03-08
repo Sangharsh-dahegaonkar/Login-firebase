@@ -1,5 +1,7 @@
 import * as React from "react";
+import rows from "./rows";
 import "./style/item.css";
+
 import {
   Table,
   TableBody,
@@ -13,75 +15,31 @@ import {
   makeStyles,
 } from "@material-ui/core";
 
-function createData(fileName, name, skills, date, criteria) {
-  return { fileName, name, skills, date, criteria };
-}
-
-const rows = [
-  createData(
-    "sanghcv.txt",
-    "Sangharsh S Dahegaonkar",
-    "C , HTML , CSS ,React",
-    "24:5:2021",
-    "react"
-  ),
-  createData(
-    "aashishcv.txt",
-    "Ashish D dhok ",
-    "C , HTML , CSS ,React, python , java, c sharp",
-    "24:5:2021",
-    "react"
-  ),
-  createData(
-    "nayankcv.txt",
-    "Nayank A singnapure",
-    "C , HTML , CSS ,React, anguler",
-    "24:5:2021",
-    "anguler"
-  ),
-  createData(
-    "nikhilcv.txt",
-    "Nikhil A Movade",
-    "C , HTML , CSS ,React,c++",
-    "24:5:2021",
-    "c++"
-  ),
-  createData(
-    "mukulcv.txt",
-    "Mukul S roy",
-    "C , HTML , CSS ,React, java , Database",
-    "24:5:2021",
-    "database"
-  ),
-  createData(
-    "mukulcv.txt",
-    "Mukul S roy",
-    "C , HTML , CSS ,React, java , Database",
-    "24:5:2021",
-    "database"
-  ),
-  createData(
-    "mukulcv.txt",
-    "Mukul S roy",
-    "C , HTML , CSS ,React, java , Database",
-    "24:5:2021",
-    "database"
-  ),
-];
-
 const useStyles = makeStyles((theme) => ({
   table: {
     minWidth: 650,
   },
   tableContainer: {
     borderRadius: 15,
-    margin: "10px 20px",
+    // margin: "10px 20px",
+    margin: "auto",
     maxWidth: 950,
   },
   tableHeaderCell: {
     fontWeight: "bold",
+    fontSize: "15px",
+    textAlign: "center",
+    border: "none",
+    // border: "1px solid black",
+    // border: "2px solid rgb(203, 221, 221)",
     backgroundColor: theme.palette.primary.dark,
     color: theme.palette.getContrastText(theme.palette.primary.dark),
+  },
+  tableRowCell: {
+    // fontWeight: "bold",
+    border: "2px solid rgb(203, 221, 221)",
+    textAlign: "center",
+    // color: "aqua",
   },
 }));
 
@@ -100,7 +58,9 @@ export default function Item() {
     setPage(0);
   };
   return (
+    // <Paper sx={{ width: "100%", overflow: "hidden" }}>
     <TableContainer component={Paper} className={classes.tableContainer}>
+      {/* <TableContainer className={classes.tableContainer}> */}
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow>
@@ -127,28 +87,42 @@ export default function Item() {
                 key={row.name}
                 sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
               >
-                <TableCell component="th" scope="row">
+                {/* <TableCell
+                  className={classes.tableRowCell}
+                  component="th"
+                  scope="row"
+                > */}
+                <TableCell className={classes.tableRowCell}>
                   {row.fileName}
                 </TableCell>
-                <TableCell>{row.name}</TableCell>
-                <TableCell>{row.skills}</TableCell>
-                <TableCell>{row.date}</TableCell>
-                <TableCell>{row.criteria}</TableCell>
+                <TableCell className={classes.tableRowCell}>
+                  {row.name}
+                </TableCell>
+                <TableCell className={classes.tableRowCell}>
+                  {row.skills}
+                </TableCell>
+                <TableCell className={classes.tableRowCell}>
+                  {row.date}
+                </TableCell>
+                <TableCell className={classes.tableRowCell}>
+                  {row.criteria}
+                </TableCell>
               </TableRow>
             ))}
         </TableBody>
-        <TableFooter>
-          <TablePagination
-            rowsPerPageOptions={[5, 10, 15]}
-            component="div"
-            count={rows.length}
-            rowsPerPage={rowsPerPage}
-            page={page}
-            onPageChange={handleChangePage}
-            onRowsPerPageChange={handleChangeRowsPerPage}
-          />
-        </TableFooter>
       </Table>
+      <TableFooter>
+        <TablePagination
+          rowsPerPageOptions={[5, 10, 15]}
+          component="div"
+          count={rows.length}
+          rowsPerPage={rowsPerPage}
+          page={page}
+          onPageChange={handleChangePage}
+          onRowsPerPageChange={handleChangeRowsPerPage}
+        />
+      </TableFooter>
     </TableContainer>
+    // </Paper>
   );
 }

@@ -1,17 +1,18 @@
 import React from "react";
 import ListItem from "./ListPopulate/ListItem";
 import AddFile from "./AddFiles/AddFile";
-import MTable from "./MTable";
-import MuiTable from "./MuiTable";
+import MTable from "./AddFiles/MTable";
+import MuiTable from "./AddFiles/MuiTable";
+
 import "./style/homePage.css";
 
 function HomePage({ handleLogout }) {
   return (
     <>
       <header>
-        <div className="tryPos">
-          <div className="posRelative">
-            <button className="buttonPos" onClick={handleLogout}>
+        <div className="headerContainer">
+          <div className="logoutButtonPosition">
+            <button className="logoutButton" onClick={handleLogout}>
               Logout
             </button>
           </div>
@@ -25,8 +26,10 @@ function HomePage({ handleLogout }) {
       <br /> */}
 
       <ListItem />
+      <br />
+
       {/* <MTable /> */}
-      <MuiTable />
+      {/* <MuiTable /> */}
     </>
   );
 }
